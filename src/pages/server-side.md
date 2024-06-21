@@ -65,7 +65,7 @@ Server side code is fully built on Cloudflare Workers, the code is available on 
 
 6. Re-deploy the code in the Cloudflare dashboard
 
-Now the worker should be up and running, you can set the callback URL to `https://your-worker-name.your-account.workers.dev/callback`.
+Now the worker should be up and running, you can set the callback URL to `https://your-worker-name.workers.dev/callback`.
 
 ## Set up a custom domain
 
