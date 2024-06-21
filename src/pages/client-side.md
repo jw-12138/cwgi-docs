@@ -101,3 +101,7 @@ import {init} from 'cwgi'
 
 init(1, {darkMode: true})
 ```
+
+---
+
+That's it, you've covered pretty much everything, the comment system should be able to run without a problem!

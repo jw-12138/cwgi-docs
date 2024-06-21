@@ -20,6 +20,7 @@ _CWGI.init()
 
 - Fast to load (~ 25Kb gzip)
 - Zero fugging Ads 🤝
+- Much prettier than most comment systems out there
 - Naturally came with GitHub
   - XSS prevention
   - Easy notifications (webhook, email)
