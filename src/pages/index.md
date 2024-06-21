@@ -17,6 +17,6 @@ CWGI is an open-source blog comment system based on GitHub Issues with minimalis
 
 ## Installation
 
-- [GitHub App](/github-app)
-- [Server side](/server-side)
-- [Client side](/client-side)
+1. [GitHub App](/github-app)
+2. [Server side](/server-side)
+3. [Client side](/client-side)
