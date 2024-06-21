@@ -48,7 +48,7 @@ init()
 
 When the deployment is done, you should be able to get a URL like `https://cwgi-cli.workers.dev`, and you can replace the URL in the pre-built bundle with this one.
 
-Also, remember to set a custom domain for this worker in order to use it in the main land China.
+Also, remember to set a custom domain for this worker in order to use it in the Mainland China.
 
 ## Functions and options
 
