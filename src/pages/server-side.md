@@ -71,7 +71,7 @@ Now the worker should be up and running, you can set the callback URL to `https:
 
 By default, the Worker URL should be working right away, unless you want the url to be a little bit clean or, you live in China (or maybe some other country). Unfortunately, the domain name `workers.dev` is blocked in China, so we need to set up a custom domain.
 
-Go to your Worker page, click on the "Settings" -> "Triggers", you'll see a custom domain section, click on the "Add Custom Domain" button. Input the domain name and you're done!
+Go to your Worker page, click on the "Settings" -> "Triggers", you'll see a custom domain section, click on the "Add Custom Domain" button. Input the domain name, wait a few minutes and that's it! Remember to also update the Callback URL in the GitHub App settings.
 
 ---
 
