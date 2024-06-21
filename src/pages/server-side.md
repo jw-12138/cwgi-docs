@@ -2,7 +2,7 @@
 layout: '../layouts/Page.astro'
 ---
 
-Server side code is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api).
+Server side is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api).
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Server side code is built for Cloudflare Workers only, the code is available on 
 1. Clone the repository
 
    ```bash
-   # Fork is recommended for furthur updates and deployment
+   # Fork is recommended for further updates and deployment
    git clone https://github.com/jw-12138/cwgi-api.git
    ```
 
