@@ -6,7 +6,7 @@ import '../style/style.scss'
 <head>
   <meta charset="utf-8"/>
   <link rel="icon" type="image/svg+xml" href="https://emoji.jw1.dev/✨"/>
-  <link rel="stylesheet" href="https://cwgi-cli.jw1.dev/style.css"/>
+  <link rel="stylesheet" href="https://cwgi-cli.jw1.dev/style.css?v=3"/>
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content={Astro.generator}/>
   <title>CWGI Docs</title>
@@ -16,23 +16,22 @@ import '../style/style.scss'
   <h1 class="text-3xl font-black text-black pb-8">CWGI - Comment With GitHub Issues</h1>
   <div class="page-content">
     <slot></slot>
-
-    {Astro.url.pathname === '/' &&
-      <div>
-        <div id="cwgi_box"></div>
-        <script src="https://cwgi-cli.jw1.dev/cwgi.iife.js" is:inline></script>
-        <script is:inline>
-          _CWGI.init(110, {
-            darkMode: false,
-            owner: 'jw-12138',
-            repo: 'jw-12138.github.io',
-            clientId: 'Iv1.717c117523f74671',
-            proxy: 'https://cwgi.jw1.dev'
-          })
-        </script>
-      </div>}
-
   </div>
+
+  {Astro.url.pathname === '/' &&
+    <div>
+      <div id="cwgi_box"></div>
+      <script src="https://cwgi-cli.jw1.dev/cwgi.iife.js?v=2" is:inline></script>
+      <script is:inline>
+        _CWGI.init(110, {
+          darkMode: false,
+          owner: 'jw-12138',
+          repo: 'jw-12138.github.io',
+          clientId: 'Iv1.717c117523f74671',
+          proxy: 'https://cwgi.jw1.dev'
+        })
+      </script>
+    </div>}
 
 </div>
 </body>
