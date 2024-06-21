@@ -15,7 +15,7 @@ But if you have decided to give a shot, here we go!
 
 1. Cloudflare account
 2. Node.js (version >= 18.0)
-3. [Bun](https://bun.sh) (version >= 1.1)
+3. [Bun](https://bun.sh) (version >= 1.1) (optional)
 
 ## Endpoints
 
@@ -28,14 +28,16 @@ But if you have decided to give a shot, here we go!
 1. Clone the repository
 
    ```bash
-   # Fork is recommended for further updates and deployment
+   # Fork is recommended for further updates and deployments
    git clone https://github.com/jw-12138/cwgi-api.git
    ```
 
 2. Install dependencies
 
    ```bash
-   bun install # ⚡️ fast
+   # bun is blazing fast ⚡️
+   # but yes you can use npm, pnpm or yarn as you like
+   bun install 
    ```
 
 3. Edit `wrangler.toml`

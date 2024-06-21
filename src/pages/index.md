@@ -18,10 +18,11 @@ _CWGI.init()
 
 ## Features
 
-- Fast to load (~ 25Kb after gzip)
+- Fast to load (~ 25Kb gzip)
+- Zero fugging Ads 🤝
 - Naturally came with GitHub
-  - XSS free
-  - Easy notifications
+  - XSS prevention
+  - Easy notifications (webhook, email)
   - Easy management / moderation
 
 ## Installation
