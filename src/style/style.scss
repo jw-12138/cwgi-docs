@@ -1,0 +1,216 @@
+html, body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', serif;
+  tab-size: 2;
+  @apply text-neutral-700 min-w-[320px];
+}
+
+img {
+  @apply max-w-full mb-6 block mx-auto rounded-xl;
+}
+
+video {
+  @apply max-w-full w-full mb-6 block mx-auto rounded-xl;
+}
+
+.page-content {
+  @apply pb-8 hyphens-auto;
+
+  .table-wrap {
+    @apply overflow-auto;
+  }
+
+  blockquote {
+    @apply pl-3 pt-3 mb-4 relative;
+
+    &:before {
+      content: "";
+      @apply block w-[3px] rounded h-full absolute left-[-3px] top-0 bg-neutral-400;
+    }
+
+    p {
+      @apply pb-3 leading-6 mb-0;
+    }
+  }
+
+  table {
+    @apply border-collapse w-full mb-6 border-t-[1px] border-l-[1px] border-neutral-500;
+
+    th,
+    td {
+      @apply border-r-[1px] border-b-[1px] border-neutral-500 px-4 py-2;
+    }
+  }
+
+  hr {
+    @apply my-8 w-[10rem] mx-auto bg-neutral-400 border-none h-[1px];
+  }
+
+  ul,
+  ol {
+    @apply list-disc list-outside pl-6 pb-2 pt-2;
+
+    li {
+      @apply mb-1 leading-6 relative;
+
+      p {
+        @apply mb-2;
+      }
+
+      &::marker {
+        @apply absolute left-0 block;
+      }
+    }
+  }
+
+  em {
+    @apply bg-yellow-200;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  img {
+    @apply sm:max-w-full mb-6 block sm:mx-auto sm:rounded-xl ml-[-1rem] w-auto max-w-[calc(100%+2rem)] rounded-none;
+  }
+
+  p {
+    @apply text-base leading-6 mb-6;
+
+    img {
+      @apply sm:max-w-full mb-6 block sm:mx-auto sm:rounded-xl ml-[-1rem] w-auto max-w-[calc(100%+2rem)] rounded-none;
+    }
+
+    video {
+      @apply sm:max-w-full mb-6 block sm:mx-auto sm:rounded-xl ml-[-1rem] max-w-[calc(100%+2rem)] w-[calc(100%+2rem)] rounded-none;
+    }
+  }
+
+  .demo {
+    @apply mb-6 overflow-auto;
+  }
+
+  a {
+    @apply underline underline-offset-4 hover:text-white hover:bg-black text-black rounded-[2px];
+
+    &[target='_blank'] {
+      @apply after:content-['↗'];
+    }
+  }
+
+  h1 {
+    @apply text-3xl leading-6 font-extrabold mb-6 relative;
+
+    &::before {
+      content: 'h1';
+      font-size: 50%;
+      @apply opacity-60 inline-block;
+    }
+  }
+
+  h2 {
+    @apply text-2xl leading-6 font-semibold mb-4 mt-[2rem] relative;
+
+    &::before {
+      content: 'h2';
+      font-size: 50%;
+      @apply opacity-60 inline-block mr-2 md:absolute md:left-[-1.5rem] left-0 bottom-0;
+    }
+  }
+
+  h3 {
+    @apply text-xl leading-6 font-semibold mb-2 mt-4 relative;
+
+    &::before {
+      content: 'h3';
+      font-size: 50%;
+      @apply opacity-60 inline-block mr-2 md:absolute md:left-[-1.5rem] left-0 bottom-0;
+    }
+  }
+
+  h4 {
+    @apply text-lg leading-6 font-semibold mb-1 mt-2 relative;
+
+    &::before {
+      content: 'h4';
+      font-size: 50%;
+      @apply opacity-60 inline-block mr-2 md:absolute md:left-[-1.5rem] left-0 bottom-0;
+    }
+  }
+
+  h5 {
+    @apply text-base leading-6 font-semibold mb-6;
+  }
+
+  h6 {
+    @apply text-base leading-6 font-semibold mb-6;
+  }
+
+  pre {
+    @apply mb-4;
+    code {
+      @apply font-normal;
+
+      &:before {
+        content: '';
+        display: none;
+      }
+  
+      &:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  code {
+    &:before {
+      content: '`';
+      display: inline;
+    }
+
+    &:after {
+      content: '`';
+      display: inline;
+    }
+
+    @apply bg-transparent mx-0 font-extrabold text-black text-sm break-all sm:break-normal sm:whitespace-pre-wrap
+  }
+
+  .astro-code {
+    background-color: transparent !important;
+  }
+}
+
+.markdown-alert {
+  @apply text-black/70 mb-2;
+
+  &.markdown-alert-note {
+    @apply text-blue-700;
+  }
+
+  &.markdown-alert-tip {
+    @apply text-green-700;
+  }
+
+  &.markdown-alert-warning {
+    @apply text-yellow-700;
+  }
+
+  &.markdown-alert-caution {
+    @apply text-red-700;
+  }
+
+  &.markdown-alert-important {
+    @apply text-purple-700;
+  }
+
+  .markdown-alert-title {
+    @apply flex items-center text-sm font-semibold text-inherit mb-0;
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}
