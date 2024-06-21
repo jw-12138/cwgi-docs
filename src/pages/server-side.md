@@ -2,7 +2,7 @@
 layout: '../layouts/Page.astro'
 ---
 
-Server side code is fully built on Cloudflare Workers, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api).
+Server side code is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api).
 
 ## Prerequisites
 
