@@ -2,7 +2,13 @@
 layout: '../layouts/Page.astro'
 ---
 
-Server side is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api).
+Server side is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api). It's not required to have this step finished, but you might encounter some problems:
+
+- Limited access to GitHub API, when user is not logged in, meaning **guests might get blocked when loading comments**.
+- Will use GitHub's markdown rendering API, which will further **increase the request consumption** within an hour.
+- **Privacy**, you know I can see things I don't suppose to see, right?
+
+But if you decided to give a shot, here we go!
 
 ## Prerequisites
 
@@ -66,6 +72,10 @@ Server side is built for Cloudflare Workers only, the code is available on [GitH
 6. Re-deploy the code in the Cloudflare dashboard
 
 Now the worker should be up and running, you can set the callback URL to `https://your-worker-name.workers.dev/callback`.
+
+## Create a personal access token
+
+Go to [this page](https://github.com/settings/tokens?type=beta) and create an access token, set the `GITHUB_TOKEN` for your worker, this can increase the rate limit to 5000 RPH, thus, a better guest experience.
 
 ## Set up a custom domain
 
