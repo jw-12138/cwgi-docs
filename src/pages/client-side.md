@@ -1,5 +1,6 @@
 ---
 layout: '../layouts/Page.astro'
+title: 'Set up the client side'
 ---
 
 Client side code is built with Solid.js and TailwindCSS, so the size of the bundle is relatively small (~ 25Kb). The code is available on [GitHub](https://github.com/jw-12138/cwgi-cli).
@@ -68,11 +69,11 @@ declare function init(githubIssueId: number, options: CWGI_Options)
 
 - `githubIssueId`, _REQUIRED_, the ID of the issue that you want to display.
 - Options:
+  - `owner`, _REQUIRED_, the owner of the repository.
+  - `repo`, _REQUIRED_, the repository name.
+  - `clientId`, _REQUIRED_, the client ID of the GitHub App.
   - `darkMode`, optional, whether to use dark mode, set to `undefined` to use auto dark mode (prefers-color-scheme), set to `true` to enforce dark mode, and vice versa.
   - `proxy`, optional, the URL of the previously deployed Cloudflare worker, if you don't specify this, all the requests will be sent to the GitHub API directly.
-  - `owner`, _REQUIRED_ the owner of the repository.
-  - `repo`, _REQUIRED_ the repository name.
-  - `clientId`, _REQUIRED_ the client ID of the GitHub App.
 
 ## Use in SPAs
 

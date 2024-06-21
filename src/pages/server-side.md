@@ -1,19 +1,21 @@
 ---
 layout: '../layouts/Page.astro'
+title: 'Set up the server side'
 ---
 
 Server side is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api). It's not required to have this step finished, but you might encounter some problems:
 
-- Limited access to GitHub API, when user is not logged in, meaning **guests might get blocked when loading comments**.
-- Will use GitHub's markdown rendering API, which will further **increase the request consumption** within an hour.
+- Limited access to GitHub API when user is not logged in, meaning **guests might get blocked when loading comments**.
+- The comment system will use GitHub's markdown rendering API, which will further **increase the request consumption** within current hour.
 - **Privacy**, you know I can see things I don't suppose to see, right?
 
-But if you decided to give a shot, here we go!
+But if you have decided to give a shot, here we go!
 
 ## Prerequisites
 
 1. Cloudflare account
-2. Node.js (version >= 18.0) installed on your machine
+2. Node.js (version >= 18.0)
+3. [Bun](https://bun.sh) (version >= 1.1)
 
 ## Endpoints
 
@@ -33,7 +35,7 @@ But if you decided to give a shot, here we go!
 2. Install dependencies
 
    ```bash
-   npm install
+   bun install # ⚡️ fast
    ```
 
 3. Edit `wrangler.toml`
@@ -55,7 +57,7 @@ But if you decided to give a shot, here we go!
 4. Deploy the code
 
    ```bash
-   npm run deploy
+   bun run deploy
    ```
 
 5. Edit the environment secrets in the Cloudflare dashboard
@@ -69,7 +71,7 @@ But if you decided to give a shot, here we go!
    - `GH_APP_CLIENT_SECRET`, _REQUIRED_, the GitHub App client secret.
    - `GITHUB_TOKEN`, GitHub API has a 60 RPH(requests per hour) rate limit to unauthenticated requests, you can set this secret to a [personal access token](https://github.com/settings/tokens?type=beta) to increase the rate limit to 5000 RPH.
 
-6. Re-deploy the code in the Cloudflare dashboard
+6. Re-deploy the worker
 
 Now the worker should be up and running, you can set the callback URL to `https://your-worker-name.workers.dev/callback`.
 

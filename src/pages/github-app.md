@@ -1,5 +1,6 @@
 ---
 layout: '../layouts/Page.astro'
+title: 'Set up the GitHub App'
 ---
 
 To make the comment system work, we need a mechanism to authenticate GitHub users, in this project, we use [GitHub Apps](https://docs.github.com/en/apps).
@@ -10,7 +11,7 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
 
 1. **GitHub App name**  
     
-   Give your app a name, this might be the hardest part.
+   Give your app a name, this might be the hardest part 🤡.
    
 2. **Homepage URL**  
    
@@ -25,8 +26,6 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
 4. **Expire user authorization tokens**  
 
    We don't need to expire user tokens, so just uncheck this one.
-   
-   ![](https://blog-r2.jw1.dev/D1iUvRhedb1DQ3vF.webp)
 
 5. **Webhook**  
    
@@ -36,8 +35,6 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
    
    We'll only need the permission to **read and write** Issues, Metadata will automatically become **read-only**.
    
-   ![](https://blog-r2.jw1.dev/VnShgY0_DxR5Wz_i.webp)
-
 7. **Where can this GitHub App be installed?**  
    
    Choose _Only on this account_, this should be the default option.
@@ -60,7 +57,7 @@ On the left side (bad design imo), choose _Install App_, and then click the _Ins
 
 ![](https://blog-r2.jw1.dev/YZnDBXa7Qo7HNB_U.webp)
 
-On this page, you can further configure permissions for your app, I'd recommend you to only select the repo that stores the issues for your blog.
+In this page, you can further configure permissions for your app, I'd recommend you to _only select the repo that stores the issues_ for your blog.
 
 ![](https://blog-r2.jw1.dev/fe801QBVCFyTWRif.webp)
 
