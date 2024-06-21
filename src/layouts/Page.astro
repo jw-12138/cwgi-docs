@@ -16,17 +16,22 @@ import '../style/style.scss'
   <h1 class="text-3xl font-black text-black pb-8">CWGI - Comment With GitHub Issues</h1>
   <div class="page-content">
     <slot></slot>
-    <div id="cwgi_box"></div>
-    <script src="https://cwgi-cli.jw1.dev/cwgi.iife.js" is:inline></script>
-    <script is:inline>
-      _CWGI.init(110, {
-        darkMode: false,
-        owner: 'jw-12138',
-        repo: 'jw-12138.github.io',
-        clientId: 'Iv1.717c117523f74671',
-        proxy: 'https://cwgi.jw1.dev'
-      })
-    </script>
+
+    {Astro.url.pathname === '/' &&
+      <div>
+        <div id="cwgi_box"></div>
+        <script src="https://cwgi-cli.jw1.dev/cwgi.iife.js" is:inline></script>
+        <script is:inline>
+          _CWGI.init(110, {
+            darkMode: false,
+            owner: 'jw-12138',
+            repo: 'jw-12138.github.io',
+            clientId: 'Iv1.717c117523f74671',
+            proxy: 'https://cwgi.jw1.dev'
+          })
+        </script>
+      </div>}
+
   </div>
 
 </div>

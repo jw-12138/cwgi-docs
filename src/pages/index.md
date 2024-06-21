@@ -2,7 +2,10 @@
 layout: '../layouts/Page.astro'
 ---
 
-[CWGI](https://github.com/jw-12138/cwgi-cli) is a blog comment system based on GitHub Issues with minimalism in mind.
+CWGI is an open-source blog comment system based on GitHub Issues with minimalism in mind.
+
+- Client side code: [GitHub](https://github.com/jw-12138/cwgi-cli)
+- Server side code: [GitHub](https://github.com/jw-12138/cwgi-api)
 
 ## Features
 
