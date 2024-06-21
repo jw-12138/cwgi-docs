@@ -44,7 +44,7 @@ init()
 1. Fork the repo: [jw-12138/cwgi-cli](https://github.com/jw-12138/cwgi-cli)
 2. Go to Cloudflare Dashboard **->** Workers & Pages **->** Create, Switch to Pages tab, and click `Connect to Git`.
 3. Choose the repository you just forked (should be named as `cwgi-cli`), and click `Begin Setup`.
-4. Choose `Vue` as the framework preset (the code is written in solid tho, but it doesn't matter), and click `Save and Deploy`.
+4. Choose `Vue` as the framework preset (the code is written in Solid.js tho, but it doesn't matter), and click `Save and Deploy`.
 
 When the deployment is done, you should be able to get a URL like `https://cwgi-cli.workers.dev`, and you can replace the URL in the pre-built bundle with this one.
 
