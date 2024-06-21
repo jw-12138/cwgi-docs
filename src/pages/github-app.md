@@ -17,8 +17,10 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
    You can fill it with the URL of your blog.
 
 3. **Callback URL**  
+   
+   You can use mine if you want to: https://cwgi.jw1.dev/callback
 
-   You will need an API to receive messages from GitHub, you can just fill it with the blog URL for now and modify it after the server side gets set up.
+   If you want to use your own Callback URL, you can read the [next guide](/server-side) later to set up a Cloudflare Worker which will enable 2 more abilities (markdown rendering & proxy).
 
 4. **Expire user authorization tokens**  
 
