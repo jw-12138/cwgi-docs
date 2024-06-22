@@ -57,11 +57,12 @@ As you can see that there is only one function in the client side code, `init`, 
 
 ```ts
 interface CWGI_Options {
-  darkMode?: boolean,
-  proxy?: string,
   owner: string,
   repo: string,
-  clientId: string
+  clientId: string,
+  darkMode?: boolean,
+  proxy?: string,
+  reactions?: boolean
 }
 
 declare function init(githubIssueId: number, options: CWGI_Options)
@@ -74,6 +75,7 @@ declare function init(githubIssueId: number, options: CWGI_Options)
   - `clientId`, _REQUIRED_, the client ID of the GitHub App.
   - `darkMode`, optional, whether to use dark mode, set to `undefined` to use auto dark mode (prefers-color-scheme), set to `true` to enforce dark mode, and vice versa.
   - `proxy`, optional, the URL of the previously deployed Cloudflare worker, if you don't specify this, all the requests will be sent to the GitHub API directly.
+  - `reactions`, optional, set to `false` to disable reactions which can save you some (actually a lot of) requests to GitHub API. 
 
 ## Use in SPAs
 

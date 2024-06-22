@@ -43,7 +43,7 @@ Okay, now click _Create GitHub App_, a new GitHub App should be created in your 
 
 ## Private key
 
-After the app is created, you should see this message:
+After the app is created, you will see this message:
 
 ![](https://blog-r2.jw1.dev/VbLVXlUXQfKutLPs.webp)
 

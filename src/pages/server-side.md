@@ -54,7 +54,7 @@ But if you have decided to give a shot, here we go!
     ```
   
     - `SITE_URL`, _REQUIRED_, the URL of your blog, otherwise the CORS policy will block the request from your blog.
-    - `ALLOWED_ORIGINS`, _OPTIONAL_, the allowed origins for CORS, you can add as many origins as you want, separated by commas `,`, use `*` to allow all origins.
+    - `ALLOWED_ORIGINS`, optional, the allowed origins for CORS, you can add as many origins as you want, separated by commas `,`, use `*` to allow all origins.
 
 4. Deploy the code
 
