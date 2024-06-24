@@ -1,5 +1,6 @@
 ---
 layout: '../layouts/Page.astro'
+showComments: true
 ---
 
 CWGI is an open-source blog comment system based on GitHub Issues with minimalism in mind.
@@ -18,16 +19,16 @@ _CWGI.init()
 
 ## Features
 
-- Fast to load (~ 25Kb gzip)
-- Zero fugging Ads 🤝
+- Fast to load (~ 25Kb gzipped)
+- No Ads, Forever 🤝
 - Much prettier than most comment systems out there
-- Naturally came with GitHub
+- GitHub's natural abilities
   - XSS prevention
   - Easy notifications (webhook, email)
   - Easy management / moderation
 
 ## Installation
 
-1. [GitHub App](/github-app) - _REQUIRED_
-2. [Server side](/server-side) - Optional
-3. [Client side](/client-side) - _PARTIAL_
+1. [GitHub App](/github-app) - _REQUIRED_, you need a GitHub App to authenticate users
+2. [Server side](/server-side) - Optional, you need a back-end to handle GitHub API requests
+3. [Client side](/client-side) - _PARTIAL_, you need to include the script and style in your blog

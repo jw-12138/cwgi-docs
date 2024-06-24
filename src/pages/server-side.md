@@ -3,13 +3,13 @@ layout: '../layouts/Page.astro'
 title: 'Set up the server side'
 ---
 
-Server side is built for Cloudflare Workers only, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api). It's not required to have this step finished, but you might encounter some problems:
+Server side is fully built on Cloudflare Workers, so you don't need to pay for the servers, the code is available on [GitHub](https://github.com/jw-12138/cwgi-api). It's not required to have this step finished, but you might encounter some problems:
 
 - Limited access to GitHub API when user is not logged in, meaning **guests might get blocked when loading comments**.
 - The comment system will use GitHub's markdown rendering API, which will further **increase the request consumption** within current hour.
-- **Privacy**, you know I can see things I don't suppose to see, right?
+- **Privacy**, Using my callback URL could make login attempts, GitHub callback codes, and user tokens visible to me. However, I respect your privacy and will not misuse this information.
 
-But if you have decided to give a shot, here we go!
+For full control and enhanced privacy, I'd recommend to deploy your own Cloudflare Worker.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ But if you have decided to give a shot, here we go!
 
 ## Endpoints
 
-1. `* /proxy/:link{.*}`, this endpoint is used to proxy requests to the GitHub API, and can acheive some level of cache.
+1. `* /proxy/:link{.*}`, this endpoint is used to proxy requests to the GitHub API, and can achieve some level of cache.
 2. `POST /markdown`, this endpoint is used to render markdown content to HTML.
 3. `GET /callback`, this endpoint is used to receive messages from GitHub just like previously mentioned, when this worker is deployed, you can set the callback URL to this endpoint.
 
@@ -56,13 +56,13 @@ But if you have decided to give a shot, here we go!
     - `SITE_URL`, _REQUIRED_, the URL of your blog, otherwise the CORS policy will block the request from your blog.
     - `ALLOWED_ORIGINS`, optional, the allowed origins for CORS, you can add as many origins as you want, separated by commas `,`, use `*` to allow all origins.
 
-4. Deploy the code
+4. Deploy
 
    ```bash
    bun run deploy
    ```
 
-5. Edit the environment secrets in the Cloudflare dashboard
+5. Edit the environment secrets in the Cloudflare Workers dashboard
 
    ![](https://blog-r2.jw1.dev/Zjequ8swKA3ZxBNI.webp)
 
@@ -79,7 +79,9 @@ Now the worker should be up and running, you can set the callback URL to `https:
 
 ## Create a personal access token
 
-Go to [this page](https://github.com/settings/tokens?type=beta) and create an access token, set the `GITHUB_TOKEN` for your worker, this can increase the rate limit to 5000 RPH, thus, a better guest experience.
+Go to [this page](https://github.com/settings/tokens?type=beta) and create an access token, set the `GITHUB_TOKEN` to this token, this can increase the rate limit to 5000 RPH, thus, a better guest experience.
+
+GitHub offers 2 options for personal access tokens: fine-grained and classic. Both are suitable and public repo permission is required to be used in this project.
 
 ## Set up a custom domain
 

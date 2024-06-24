@@ -21,7 +21,7 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
    
    You can use mine if you want to: https://cwgi.jw1.dev/callback
 
-   If you want to use your own Callback URL, you can read the [next guide](/server-side) later to set up a Cloudflare Worker which will enable 2 more abilities (markdown rendering & API proxy).
+   If you want to use your own Callback URL, the [next guide](/server-side) will show you how to configure a back-end to handle this callback.
 
 4. **Expire user authorization tokens**  
 

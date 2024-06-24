@@ -7,10 +7,6 @@ Client side code is built with Solid.js and TailwindCSS, so the size of the bund
 
 ## How to use
 
-There are two ways to use the client side code, one is to use the pre-built bundle, and the other is to build the bundle yourself.
-
-### Use the pre-built bundle
-
 ```html
 <!-- index.html -->
 <link rel="stylesheet" href="https://cwgi-cli.jw1.dev/style.css">
@@ -23,7 +19,9 @@ There are two ways to use the client side code, one is to use the pre-built bund
 _CWGI.init()
 ```
 
-Or, we can use the **ES module** version:
+<details><summary>ES module version
+
+</summary>
 
 ```html
 <!-- index.html -->
@@ -40,20 +38,9 @@ import {init} from 'https://cwgi-cli.jw1.dev/cwgi.js'
 init()
 ```
 
-### Build the bundle yourself
+</details>
 
-1. Fork the repo: [jw-12138/cwgi-cli](https://github.com/jw-12138/cwgi-cli)
-2. Go to Cloudflare Dashboard **->** Workers & Pages **->** Create, Switch to Pages tab, and click `Connect to Git`.
-3. Choose the repository you just forked (should be named as `cwgi-cli`), and click `Begin Setup`.
-4. Choose `Vue` as the framework preset (the code is written in Solid.js tho, but it doesn't matter), and click `Save and Deploy`.
-
-When the deployment is done, you should be able to get a URL like `https://cwgi-cli.workers.dev`, and you can replace the URL in the pre-built bundle with this one.
-
-Also, remember to set a custom domain for this worker in order to use it in the Mainland China.
-
-## Functions and options
-
-As you can see that there is only one function in the client side code, `init`, the parameters are listed below:
+## Options
 
 ```ts
 interface CWGI_Options {
@@ -103,6 +90,17 @@ import {init} from 'cwgi'
 
 init(1, {darkMode: true})
 ```
+
+## Build the bundle yourself
+
+1. Fork the repo: [jw-12138/cwgi-cli](https://github.com/jw-12138/cwgi-cli)
+2. Go to Cloudflare Dashboard **->** Workers & Pages **->** Create, Switch to Pages tab, and click `Connect to Git`.
+3. Choose the repository you just forked (should be named as `cwgi-cli`), and click `Begin Setup`.
+4. Choose `Vue` as the framework preset (though the code is written in Solid.js), and click `Save and Deploy`.
+
+When the deployment is done, you should be able to get a URL like `https://cwgi-cli.workers.dev`, and you can replace the URL in the pre-built bundle with this one.
+
+Also, remember to set a custom domain for this worker in order to use it in the Mainland China.
 
 ---
 
