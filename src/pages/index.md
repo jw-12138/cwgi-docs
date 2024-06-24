@@ -19,7 +19,7 @@ _CWGI.init()
 
 ## Features
 
-- Fast to load (~ 25Kb gzipped)
+- Fast to load (~ 23Kb gzipped)
 - No Ads, Forever 🤝
 - Much prettier than most comment systems out there
 - GitHub's natural abilities

@@ -3,7 +3,7 @@ layout: '../layouts/Page.astro'
 title: 'Set up the client side'
 ---
 
-Client side code is built with Solid.js and TailwindCSS, so the size of the bundle is relatively small (~ 25Kb). The code is available on [GitHub](https://github.com/jw-12138/cwgi-cli).
+Client side code is built with Solid.js and TailwindCSS, so the size of the bundle is relatively small (~ 23Kb). The code is available on [GitHub](https://github.com/jw-12138/cwgi-cli).
 
 ## How to use
 
