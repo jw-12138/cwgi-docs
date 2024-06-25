@@ -22,8 +22,9 @@ _CWGI.init()
 - Fast to load (~ 23Kb gzipped)
 - No Ads, Forever 🤝
 - Much prettier than most comment systems out there
+- Setup once, use in anywhere
 - GitHub's natural abilities
-  - XSS prevention
+  - XSS / Bots / Spam prevention
   - Easy notifications (webhook, email)
   - Easy management / moderation
 
@@ -32,3 +33,5 @@ _CWGI.init()
 1. [GitHub App](/github-app) - _REQUIRED_, you need a GitHub App to authenticate users
 2. [Server side](/server-side) - Optional, you need a back-end to handle GitHub API requests
 3. [Client side](/client-side) - _PARTIAL_, you need to include the script and style in your blog
+
+---

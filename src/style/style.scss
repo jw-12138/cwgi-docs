@@ -2,7 +2,7 @@ html, body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', serif;
   tab-size: 2;
-  @apply text-neutral-700 min-w-[320px];
+  @apply text-neutral-700 min-w-[320px] dark:bg-neutral-900 dark:text-white;
 }
 
 img {
@@ -64,7 +64,7 @@ video {
   }
 
   em {
-    @apply bg-yellow-200;
+    @apply bg-yellow-200 dark:bg-yellow-500/50 dark:text-white;
   }
 
   ol {
@@ -92,7 +92,7 @@ video {
   }
 
   a {
-    @apply underline underline-offset-4 hover:text-white hover:bg-black text-black rounded-[2px];
+    @apply underline underline-offset-4 hover:text-white hover:bg-black text-black rounded-[2px] dark:text-white dark:hover:bg-white dark:hover:text-black;
 
     &[target='_blank'] {
       @apply after:content-['↗'];
@@ -156,7 +156,7 @@ video {
         content: '';
         display: none;
       }
-  
+
       &:after {
         content: '';
         display: none;
@@ -175,7 +175,7 @@ video {
       display: inline;
     }
 
-    @apply bg-transparent mx-0 font-extrabold text-black text-sm break-all sm:break-normal sm:whitespace-pre-wrap
+    @apply bg-transparent mx-0 font-extrabold text-black text-sm break-all sm:break-normal sm:whitespace-pre-wrap dark:text-white
   }
 
   .astro-code {
@@ -212,5 +212,19 @@ video {
     svg {
       fill: currentColor;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .astro-code-themes,
+  .astro-code-themes span {
+    color: var(--shiki-dark) !important;
+    background-color: transparent !important;
+  }
+
+  .shiki-themes,
+  .shiki-themes span {
+    color: var(--shiki-dark) !important;
+    background-color: transparent !important;
   }
 }

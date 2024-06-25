@@ -15,7 +15,7 @@ const {title, showComments} = Astro.props.frontmatter
 </head>
 <body>
 <div class="max-w-[46rem] mx-auto w-full md:px-0 px-4 py-8">
-  <h1 class="text-3xl font-black text-black pb-8">CWGI - {title ? title : 'Comment With GitHub Issues'}</h1>
+  <h1 class="text-3xl font-black text-black pb-8 dark:text-white">CWGI - {title ? title : 'Comment With GitHub Issues'}</h1>
   <div class="page-content">
     <slot></slot>
   </div>
@@ -26,7 +26,6 @@ const {title, showComments} = Astro.props.frontmatter
       <script src="https://cwgi-cli.jw1.dev/cwgi.iife.js?v=3" is:inline></script>
       <script is:inline>
         _CWGI.init(1, {
-          darkMode: false,
           owner: 'jw-12138',
           repo: 'cwgi-docs',
           clientId: 'Iv1.717c117523f74671',
