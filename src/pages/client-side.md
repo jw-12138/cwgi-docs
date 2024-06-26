@@ -49,7 +49,9 @@ interface CWGI_Options {
   clientId: string,
   darkMode?: boolean,
   proxy?: string,
-  reactions?: boolean
+  reactions?: boolean,
+  remoteMarkdownRendering?: boolean,
+  markdownRenderingEndpoint?: string
 }
 
 declare function init(githubIssueId: number, options: CWGI_Options)
@@ -63,6 +65,26 @@ declare function init(githubIssueId: number, options: CWGI_Options)
   - `darkMode`, optional, whether to use dark mode, set to `undefined` to use auto dark mode (prefers-color-scheme), set to `true` to enforce dark mode, and vice versa.
   - `proxy`, optional, the URL of the previously deployed Cloudflare worker, if you don't specify this, all the requests will be sent to the GitHub API directly.
   - `reactions`, optional, set to `false` to disable reactions which can save you some (actually a lot of) requests to GitHub API. 
+  - `remoteMarkdownRendering`, optional, defaults to `true`, set `false` to disable remote markdown rendering.
+  - `markdownRenderingEndpoint`, optional, set this URL to overwrite the default endpoint for markdown rendering. The endpoint should follow below rules:
+    
+    **Request**:
+
+    ```http
+    POST /
+    Content-Type: text/plain
+    
+    hello world!
+    ```
+
+    **Response**:
+    
+    ```http
+    Content-Type: text/plain
+
+    <p>hello world</p>
+    ```
+
 
 ## Use in SPAs
 
