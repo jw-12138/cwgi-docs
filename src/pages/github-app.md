@@ -35,9 +35,13 @@ Go to [github.com/settings/apps/new](https://github.com/settings/apps/new) to cr
    
    We'll only need the permission to **read and write** Issues, Metadata will automatically become **read-only**.
    
-7. **Where can this GitHub App be installed?**  
-   
-   Choose _Only on this account_, this should be the default option.
+7. **Where can this GitHub App be installed?**
+
+   Choose _Any account_.
+
+   > **Note**: GitHub has changed the behavior of private GitHub Apps — previously, private apps (set to "Only on this account") could still be used for OAuth authorization by any GitHub user. Now, GitHub returns 404 for non-owner users trying to authorize through a private app's OAuth flow. See [community#163992](https://github.com/orgs/community/discussions/163992) for more details. If you previously set this to "Only on this account", please go to your GitHub App settings and make it public:
+   >
+   > ![](https://blog-r2.jw1.dev/aufWp0TXOx9xyQAE.jpg)
 
 Okay, now click _Create GitHub App_, a new GitHub App should be created in your account now.
 
